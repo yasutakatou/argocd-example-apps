@@ -26,7 +26,7 @@ jobs:
           minor=${version_parts[1]}
           patch=${version_parts[2]}
           new_patch=$((patch + 1))
-          new_version="v$major.$minor.$new_patch"
+          new_version="v0.$minor.$new_patch"
           echo "NEW_VERSION=${new_version}" >> "$GITHUB_OUTPUT"
           echo $new_version > VERSION
 
