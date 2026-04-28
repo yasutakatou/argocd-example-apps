@@ -22,11 +22,9 @@ jobs:
         run: |
           current_version=${{ steps.current_version.outputs.CURRENT_VERSION }}
           IFS='.' read -r -a version_parts <<< "${current_version#v}"
-          major=${version_parts[0]}
-          minor=${version_parts[1]}
           patch=${version_parts[2]}
           new_patch=$((patch + 1))
-          new_version="v0.$minor.$new_patch"
+          new_version="v0.0.$new_patch"
           echo "NEW_VERSION=${new_version}" >> "$GITHUB_OUTPUT"
           echo $new_version > VERSION
 
