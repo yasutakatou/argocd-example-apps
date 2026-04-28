@@ -51,3 +51,4 @@ to explore Argo CD and GitOps!
 [badge_sync_waves]: https://cd.apps.argoproj.io/api/badge?revision=true&name=example.sync-waves
 
 auto-versioning test
+test2
